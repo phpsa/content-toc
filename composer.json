@@ -1,0 +1,47 @@
+{
+    "name": "phpsa/content-toc",
+    "description": "A Statamic 3 addon to generate TOC for content",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Phpsa\\ContentToc\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phpsa\\ContentToc\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Statamic TOC",
+            "description": "A Statamic 3 addon to generate TOC for content"
+        },
+        "laravel": {
+            "providers": [
+                "Phpsa\\ContentToc\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "statamic/cms": "3.0.*"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^4.2",
+        "orchestra/testbench": "^5.0"
+    },
+    "minimum-stability": "dev",
+    "scripts": {
+        "lint": [
+            "php-cs-fixer fix ./src"
+        ],
+        "test": [
+            "./vendor/bin/phpunit"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
